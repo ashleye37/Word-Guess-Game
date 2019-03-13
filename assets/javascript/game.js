@@ -10,9 +10,11 @@ var selectedAnimal;
 var blankSpaces = [];
 var letters=[];
 var pressedKey = false;
-var choicesRemaining = 10;
+var choicesRemaining = 5;
 var losses = 0;
 var wins = 0;
+var gameOverSound = new Audio("assets/sounds/gameover-sound.wav");
+var youWinSound = new Audio("assets/sounds/drum-roll-win.mp3");
 
 //Starting Hangman Game and selecting random animal.
 function startHangman () {
@@ -23,7 +25,7 @@ function startHangman () {
     };
     document.getElementById("animalDisplay").innerHTML = blankSpaces.join(" ");
     console.log (blankSpaces);
-    choicesRemaining = 10;
+    choicesRemaining = 5;
     document.getElementById("choicesdisplay").innerHTML = choicesRemaining;
     document.getElementById("guessedLetters").innerHTML = "";
     document.getElementById("lossesDisplay").innerHTML = "";
@@ -40,7 +42,7 @@ function resetHangman () {
     };
     document.getElementById("animalDisplay").innerHTML = blankSpaces.join(" ");
     console.log (blankSpaces);
-    choicesRemaining = 10;
+    choicesRemaining = 5;
     document.getElementById("choicesdisplay").innerHTML = choicesRemaining;
     document.getElementById("guessedLetters").innerHTML = "";
 };
@@ -68,13 +70,14 @@ document.onkeypress = function(evt) {
     if (choicesRemaining === 0) {
         losses = losses + 1;
         document.getElementById("lossesDisplay").innerHTML = losses;
+        gameOverSound.play();
         resetHangman();
     }
 
     if (selectedAnimal.toLowerCase() == blankSpaces.join("").toLowerCase()) {
         wins = wins + 1;
         document.getElementById("winsDisplay").innerHTML = wins;
-        console.log(wins);
+        youWinSound.play();
         document.getElementById("animalDisplay").innerHTML = "";
         resetHangman();
     }
