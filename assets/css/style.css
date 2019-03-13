@@ -10,6 +10,7 @@ body {
     border: solid;
     border-color: darkslategray;
     background-color: lightgrey;
+    opacity: .9;
 }
 
 #displayDetails {
@@ -30,12 +31,8 @@ h1 {
 .instructionBox {
     border: dotted;
     border-color: darkslategray;
-    padding: 10px;
+    padding: 10px 20px;
     margin: 10px;
-}
-
-h2 {
-    padding: 0px 20px;
 }
 
 h4 {
@@ -49,4 +46,8 @@ h4 {
 
 #animalDisplayLabels {
     text-align: center;
+}
+
+.answers {
+    color: darkslategray;
 }
