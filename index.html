@@ -23,46 +23,43 @@
 
             <div id="instructionDetails" class="col-md-12">
                 <ol>
-                    <h4><li>Click the button below to begin the game!</li></h4>
-                    <h4><li>Use the keyboard to select letters to guess the hidden word within 13 guesses!</h4></li>
-                    <h4><li>Click "Let's Play" again to restart.</li></h4>
+                    <h4><li>Click let's play to begin the game!</li></h4>
+                    <h4><li>Use the keyboard to select letters to guess the hidden word within 10 guesses!</h4></li>
                 </ol>
             </div>
         </div>
-
         
-        <div class="instructionBox">
-            <div id="displayDetails" class="row">
-
-                <div class=col-md-4>
-                    <button onclick="startHangman()">Let's Play</button>
-                </div>
-                
-                <div id="animalDisplayLabels" class=col-md-8>
-                    <h4>Current Word:</h4>
-                    <h4 id="animalDisplay"></h4>
-                </div>
+        <div id="displayDetails" class="row">
+            <div class=col-md-4>
+                <button onclick="startHangman()">Let's Play! </button>
             </div>
 
-            <div id="displayWinsLosses" class="row">
-                <div class=col-md-6>
-                    <h4 id="winsDisplay">Wins:</h4>
-                </div>
-                <div class=col-md-6>
-                    <h4 id="lossesDisplay">Losses:</h4>
-                </div>
+            <div id="animalDisplayLabels" class=col-md-8>
+                <h4>Current Word:</h4>
+                <h4 id="animalDisplay"></h4>
             </div>
         </div>
 
-        
-
-        <div class="row">
-            <div class=col-md-4>
-                <h4>Letters Guessed:</h4>
+        <div class="instructionBox">
+            <div id="displayWinsLosses" class="row">
+                <div class=col-md-6>
+                    <h4>Wins:</h4><h4 id="winsDisplay"></h4>
+                </div>
+                <div class=col-md-6>
+                    <h4>Losses:</h4><h4 id="lossesDisplay"></h4>
+                </div>
             </div>
 
-            <div class=col-md-4>
-                <h4>Choices Remaining:<h4 id="choicesdisplay"></h4>
+            <div class="row">
+                <div class=col-md-6>
+                     <h4>Letters Guessed:</h4>
+                     <h4 id="guessedLetters"></h4>
+                </div>
+
+                <div class=col-md-6>
+                    <h4>Choices Remaining:</h4>
+                    <h4 id="choicesdisplay"></h4>
+                </div>
             </div>
         </div>
 
